@@ -91,7 +91,6 @@ public class HomePage extends AbstractBasePage
 
     public HomePage changeLanguageDeutsch()
     {
-        currentLanguage.click();
         changeLanguageDeutsch.click();
         return this;
     }
