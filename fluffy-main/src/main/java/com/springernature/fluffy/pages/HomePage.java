@@ -28,10 +28,10 @@ public class HomePage extends AbstractBasePage
     @FindBy(how = How.CSS, using = "#advanced-search-link")
     private WebElement advancedSearchLink;
 
-    @FindBy(how = How.CSS, using = ".lang > button > div")
+    @FindBy(how = How.CSS, using = ".cross-nav--wide > .lang span")
     private WebElement currentLanguage;
 
-    @FindBy(how = How.CSS, using = ".change-language-Deutsch")
+    @FindBy(how = How.CSS, using = ".cross-nav--wide .change-language-Deutsch")
     private WebElement changeLanguageDeutsch;
 
     public HomePage(WebDriver driver)
@@ -91,6 +91,7 @@ public class HomePage extends AbstractBasePage
 
     public HomePage changeLanguageDeutsch()
     {
+        currentLanguage.click();
         changeLanguageDeutsch.click();
         return this;
     }
